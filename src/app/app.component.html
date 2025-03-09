@@ -1,0 +1,21 @@
+<div class="app-container">
+  <!-- Background Image -->
+  <div class="background-image"></div>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <button (click)="currentComponent = 'login'">Login</button>
+    <button (click)="currentComponent = 'register'">Register</button>
+    <button (click)="currentComponent = 'forgotPassword'">Forgot Password</button>
+    <button (click)="currentComponent = 'user'">User</button>
+  </nav>
+
+  <!-- Dynamic Content -->
+  <div class="content">
+    <app-login *ngIf="currentComponent === 'login'"></app-login>
+    <app-register *ngIf="currentComponent === 'register'"></app-register>
+    <app-forgot-password *ngIf="currentComponent === 'forgotPassword'"></app-forgot-password>
+    <app-user *ngIf="currentComponent === 'user'"></app-user>
+  </div>
+</div>
+  

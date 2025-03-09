@@ -1,0 +1,101 @@
+/* Full-Screen Black Background */
+body {
+  background-color: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* User Container */
+.user-container {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #1f1f1f, #292929); /* Dark background */
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 255, 255, 0.3); /* Neon glow effect */
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid rgba(0, 255, 255, 0.2);
+}
+
+/* Heading Styling */
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00ffcc, #0099ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* User Info */
+.user-info {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ddd;
+}
+
+/* Neon Buttons */
+button {
+  margin: 12px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #00ffcc, #0099ff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background: linear-gradient(135deg, #0099ff, #00ffcc);
+  transform: scale(1.07);
+  box-shadow: 0px 5px 12px rgba(0, 255, 255, 0.6);
+}
+
+/* Neon Border Animation */
+@keyframes neon-border {
+  0% {
+      border-color: rgba(0, 255, 255, 0.3);
+      box-shadow: 0px 0px 8px rgba(0, 255, 255, 0.3);
+  }
+  50% {
+      border-color: rgba(0, 255, 255, 0.6);
+      box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.6);
+  }
+  100% {
+      border-color: rgba(0, 255, 255, 0.3);
+      box-shadow: 0px 0px 8px rgba(0, 255, 255, 0.3);
+  }
+}
+
+/* Apply Animation */
+.user-container {
+  animation: neon-border 2s infinite alternate;
+}
+
+/* Responsive Design */
+@media (max-width: 450px) {
+  .user-container {
+      width: 90%;
+      padding: 25px;
+  }
+
+  button {
+      width: 100%;
+      padding: 12px;
+  }
+}
